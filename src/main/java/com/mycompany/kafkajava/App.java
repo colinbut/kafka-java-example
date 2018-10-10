@@ -1,4 +1,4 @@
-package com.mycompany.javakafka;
+package com.mycompany.kafkajava;
 
 /**
  * Hello world!

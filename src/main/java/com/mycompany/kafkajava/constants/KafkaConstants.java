@@ -3,7 +3,7 @@
  * | Copyright © 2018 Colin But. All rights reserved.
  * |-------------------------------------------------
  */
-package com.mycompany.javakafka.constants;
+package com.mycompany.kafkajava.constants;
 
 public final class KafkaConstants {
 

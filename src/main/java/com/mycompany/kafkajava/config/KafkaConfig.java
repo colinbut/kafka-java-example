@@ -3,9 +3,9 @@
  * | Copyright © 2018 Colin But. All rights reserved.
  * |-------------------------------------------------
  */
-package com.mycompany.javakafka.config;
+package com.mycompany.kafkajava.config;
 
-import com.mycompany.javakafka.constants.KafkaConstants;
+import com.mycompany.kafkajava.constants.KafkaConstants;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerConfig;
