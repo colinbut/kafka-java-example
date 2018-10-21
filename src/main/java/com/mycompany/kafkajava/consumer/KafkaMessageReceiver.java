@@ -11,9 +11,9 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class KafkaMessageConsumer {
+public class KafkaMessageReceiver {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaMessageConsumer.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(KafkaMessageReceiver.class);
 
     private static final int GIVE_UP = 100;
 

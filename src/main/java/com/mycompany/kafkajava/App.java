@@ -1,6 +1,6 @@
 package com.mycompany.kafkajava;
 
-import com.mycompany.kafkajava.consumer.KafkaMessageConsumer;
+import com.mycompany.kafkajava.consumer.KafkaMessageReceiver;
 import com.mycompany.kafkajava.producer.KafkaMessageSender;
 
 import java.util.UUID;
@@ -8,10 +8,10 @@ import java.util.UUID;
 public class App {
 
     public static void main( String[] args ) {
-        final KafkaMessageConsumer kafkaMessageConsumer = new KafkaMessageConsumer();
+        final KafkaMessageReceiver kafkaMessageReceiver = new KafkaMessageReceiver();
         final KafkaMessageSender kafkaMessageSender = new KafkaMessageSender();
 
-        new Thread(kafkaMessageConsumer::consumeMessage).start();
+        new Thread(kafkaMessageReceiver::consumeMessage).start();
 
         new Thread(() -> {
             String message = "Message-" + UUID.randomUUID();
