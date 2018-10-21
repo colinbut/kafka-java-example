@@ -16,18 +16,20 @@ public class KafkaMessageSender {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(KafkaMessageSender.class);
 
-    public void sendMessage(String message) {
+    public void sendMessage(int numberOfMessageToSend) {
         final Producer<Long, String> kafkaProducer = KafkaConfig.getProducer();
 
-        try {
+        for (int i = 0; i < numberOfMessageToSend; i++) {
+
+            String message = "Message-" + i;
             ProducerRecord<Long, String> record = new ProducerRecord<>(KafkaConstants.TOPIC, 1L, message);
 
             LOGGER.info("Sending kafka record: {}", record);
 
             kafkaProducer.send(record);
-        } finally {
-            kafkaProducer.flush();
-            kafkaProducer.close();
         }
+
+        kafkaProducer.flush();
+        kafkaProducer.close();
     }
 }
