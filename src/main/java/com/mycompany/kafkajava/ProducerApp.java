@@ -5,8 +5,6 @@ import com.mycompany.kafkajava.producer.KafkaMessageSender;
 public class ProducerApp {
 
     public static void main( String[] args ) {
-        final KafkaMessageSender kafkaMessageSender = new KafkaMessageSender();
-
-        new Thread(() -> kafkaMessageSender.sendMessage(25)).start();
+        new Thread(() -> new KafkaMessageSender().sendMessage(25)).start();
     }
 }
