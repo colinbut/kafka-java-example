@@ -34,7 +34,7 @@ public class KafkaMessageReceiver {
                 }
             }
 
-            consumerRecords.forEach(consumerRecord -> LOGGER.info("Consumer Record:(%d %s, %d, %d)%n",
+            consumerRecords.forEach(consumerRecord -> LOGGER.info("Consumer Record:({} {}, {}, {})",
                 consumerRecord.key(), consumerRecord.value(),
                 consumerRecord.partition(), consumerRecord.offset()));
 
