@@ -36,7 +36,7 @@ public final class KafkaConfig {
     public static Consumer<Long, String> getConsumer() {
         Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KafkaConstants.BOOTSTRAP_SERVERS);
-        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "KafkaJava");
+        properties.put(ConsumerConfig.GROUP_ID_CONFIG, "KafkaJava" + System.currentTimeMillis()); // Change the Group ID Config to determine how many consumer groups to run
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, LongDeserializer.class.getName());
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         Consumer<Long, String> consumer = new KafkaConsumer<>(properties);
