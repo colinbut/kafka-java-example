@@ -2,7 +2,7 @@
 
 This repository showcase using Kafka with vanilla Java.
 
-### Start Kafka & Create the Topics
+### Start Kafka & Create the Topics
 
 Follow the example commands in the `kafka-cli-commands.txt` which can be found under the `src/main/resources` folder.
 
